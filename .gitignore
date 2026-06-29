@@ -1,6 +1,9 @@
 # documentation screenshots (local reference only)
 photos_documentation/
 
+# internal build plan / personal notes (local only)
+aml_data_mart_1week_plan_copy.md
+
 # generated data files
 *.parquet
 *.csv
