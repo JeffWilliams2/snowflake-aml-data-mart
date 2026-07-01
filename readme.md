@@ -121,6 +121,26 @@ accepted values — re-runnable any time and used to gate the gold layer.
 └── assets/                       # curated screenshots used in this README
 ```
 
+## Serving layer — Streamlit dashboard
+
+A native Streamlit-in-Snowflake app deployed over the gold star schema,
+scaffolded with Cortex Code (Snowflake's embedded AI assistant).
+
+**Metrics surfaced:**
+- Total cash credits / transaction count / CTR candidate customers
+- Average transaction value / cash % of total volume
+- Branch breakdown (bar chart) and transaction volume trend (line chart)
+- CTR candidates table (customers exceeding $10K daily cash threshold)
+
+**Why Streamlit-in-Snowflake over Power BI:**
+Snowflake deprecated legacy Snowsight Dashboards (April 2026) and replaced them
+with Streamlit as the native visualization layer. No external licensing, no .pbix
+files — the app runs on the same warehouse as the pipeline and is shareable via URL
+to anyone with account access.
+
+![Dashboard screenshot](assets/dashboard-overview.png)
+![Dashboard filtered](assets/dashboard-filtered.png)
+
 ## How to run
 
 **Prerequisites:** a Snowflake account, an Azure subscription (ADLS Gen2 + Data Factory),
